@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faClipboardQuestion} from '@fortawesome/free-solid-svg-icons'
+
+
 import styled from "styled-components";
 
 
@@ -22,7 +26,9 @@ b{
 
 function Header(){
     return(<StyledHeader>
-        <LogoLink href ="" className="logo"><b>Q and A</b></LogoLink>
+        <LogoLink href ="" className="logo">
+        <FontAwesomeIcon icon= {faClipboardQuestion} />
+            <b>Q and A</b></LogoLink>
         <form action="" className="search">
           <input type="text" placeholder="Search..."/>
         </form>
