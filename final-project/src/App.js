@@ -2,7 +2,16 @@
 
 function App() {
   return (
-    <div>Test</div>
+    <div>
+      <header>
+        <a href ="" className="logo">Q and A</a>
+        <form action="" className="search">
+          <input type="text" placeholder="Search..."/>
+        </form>
+        <a href = "" className="profile">Melwin</a>
+     </header>
+    </div>
+      
   );
 }
 
