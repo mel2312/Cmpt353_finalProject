@@ -26,6 +26,7 @@ const QuestionRow = styled.div`
     padding: 15px 15px;
     display: grid;
     grid-template-columns: repeat(3,50px) 1fr; 
+    border-top: 1px solid #555;
 
 
 `;
@@ -34,6 +35,7 @@ const QuestionStat= styled.div`
     text-align: center;
     display: inline-block;
     font-size: 1.2rem;
+    color:#aaa;
     span{
         font-size: .7rem;
         display:block;
@@ -49,9 +51,21 @@ const QuestionTitleArea = styled.div`
 
 const Tag = styled.span`
     display: inline-block;
-    margin-right: 3px;
+    margin-right: 5px;
     background-color: #3e4a52
     color: #9cc3db
+    padding: 7px;
+    border-raidus: 4px;
+    font-size: .9rem
+    
+`;
+
+const QuestionLink = styled.a`
+    text-decoration: none;
+    color: #3ca4ff;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px
 `;
 
 function Question(){
@@ -65,7 +79,11 @@ function Question(){
                 <QuestionStat>0 <span>votes</span></QuestionStat>
                 <QuestionStat>0 <span>answers</span></QuestionStat>
                 <QuestionStat>0 <span>views</span></QuestionStat>
-                <QuestionTitleArea>Message of the channels</QuestionTitleArea>
+                <QuestionTitleArea>
+                    <QuestionLink>Message of the channels</QuestionLink>
+                    <Tag>Tag1</Tag>
+                    <Tag>Tag2</Tag>
+                </QuestionTitleArea>
             </QuestionRow>
             
         </main>
