@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   background-color: #393939;
   box-shadow: 0 3px 3px rgba(0,0,0,.2);
   display:grid;
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 220px 1fr 200px;
   grid-column-gap: 20px;
 `;
 
@@ -25,16 +25,19 @@ svg{
 margin-top: 10px;
 display: inline-block;
 float: left;
+
 }
 span{
     display: inline-block;
     padding-left: 5px;
-    padding-top: 15px;
+    padding-top: 10px;
     font-size: 1.2rem;
-
+    font-weight: 300;
 }
 b{
-    font-weight: bold;    
+    font-weight: normal; 
+    display: inline-block;
+    margin-left: 2px;   
 }
 `;
 
