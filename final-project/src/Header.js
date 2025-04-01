@@ -29,7 +29,8 @@ float: left;
 span{
     display: inline-block;
     padding-left: 5px;
-    padding-top: 15px
+    padding-top: 15px;
+    font-size: 1.2rem;
 
 }
 b{
@@ -48,6 +49,12 @@ const SearchInput = styled.input`
     margin top: 9 px;
 `;
 
+const ProfileLink = styled.a`
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+`;
+
 function Header(){
     return(<StyledHeader>
         <LogoLink href ="" className="logo">
@@ -59,7 +66,7 @@ function Header(){
         <form action="" className="search">
           <SearchInput type="text" placeholder="Search..."/>
         </form>
-        <a href = "" className="profile">Melwin</a>
+        <ProfileLink href = "" className="profile">Melwin</ProfileLink>
      </StyledHeader>
      );
 }
