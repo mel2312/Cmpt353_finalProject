@@ -32,7 +32,7 @@ function Question(){
         <main>
             <HeaderRow>
                 <StyledHeader>Questions</StyledHeader>
-                <BlueButton>Ask&nbsp;Question</BlueButton>
+                <BlueButton to={'/ask'}>Ask&nbsp;Question</BlueButton>
             </HeaderRow>         
             <QuestionRow/>
             <QuestionRow/>
