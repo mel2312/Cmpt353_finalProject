@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import QuestionRow from "./QuestionRow";
+import { Link } from "react-router-dom";
+
 const StyledHeader = styled.h1`
     font-size: 1.8rem;
 
@@ -12,12 +14,13 @@ const HeaderRow = styled.div`
 
 `;
 
-const BlueButton = styled.button`
+const BlueButton = styled(Link)`
     background-color: #378ad3;
     color: #fff;
     border:0;
     border-raidus: 5px;
     padding: 12px 10px;
+    text-decoration: none;
 
 `;
 
