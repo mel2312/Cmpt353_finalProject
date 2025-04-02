@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faClipboardQuestion} from '@fortawesome/free-solid-svg-icons'
-
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
 `;
 
 
-const LogoLink = styled.a`
+const LogoLink = styled(Link)`
 color: #fff;
 text-decoration: none;
 display : inline-block;
@@ -60,7 +60,7 @@ const ProfileLink = styled.a`
 
 function Header(){
     return(<StyledHeader>
-        <LogoLink href ="" className="logo">
+        <LogoLink to = {'/'} className="logo">
         <FontAwesomeIcon icon= {faClipboardQuestion}  size ="2x"/>
             <span>
             <b>Q and A</b>

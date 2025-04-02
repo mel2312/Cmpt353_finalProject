@@ -24,9 +24,10 @@ function App() {
     <div>
       <Reset />
       <GlobalStyles/>
-      <Header/>
+      
       
       <Router>
+        <Header/>
         <Routes>
           <Route path='/ask' Component={AskPage}/>
           <Route path='/' Component={Question} />
