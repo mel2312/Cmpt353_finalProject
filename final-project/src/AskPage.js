@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import Header1 from "./Header1";
+
 
 const Container = styled.div`
     padding:30px 20px;
@@ -28,6 +30,7 @@ const QuestionBodyTextArea= styled.textarea`
 export default function AskPage(){
     return(
         <Container>
+            <Header1>Ask a Question</Header1>
             <QuestionTittleInput type="text" placeholder= "Title of your question"/>
             <QuestionBodyTextArea placeholder="Type your description of your question here"/>
         </Container>

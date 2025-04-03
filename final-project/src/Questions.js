@@ -1,11 +1,8 @@
 import styled from "styled-components";
 import QuestionRow from "./QuestionRow";
 import { Link } from "react-router-dom";
+import Header1 from "./Header1";
 
-const StyledHeader = styled.h1`
-    font-size: 1.8rem;
-
-`;
 
 const HeaderRow = styled.div`
     display:grid;
@@ -31,7 +28,7 @@ function Question(){
     return(
         <main>
             <HeaderRow>
-                <StyledHeader>Questions</StyledHeader>
+                <Header1>Questions</Header1>
                 <BlueButton to={'/ask'}>Ask&nbsp;Question</BlueButton>
             </HeaderRow>         
             <QuestionRow/>
