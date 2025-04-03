@@ -30,7 +30,7 @@ const QuestionBodyTextArea= styled.textarea`
 export default function AskPage(){
     return(
         <Container>
-            <Header1>Ask a Question</Header1>
+            <Header1 style={{marginBottom:'20px'}}>Ask a Question</Header1>
             <QuestionTittleInput type="text" placeholder= "Title of your question"/>
             <QuestionBodyTextArea placeholder="Type your description of your question here"/>
         </Container>
