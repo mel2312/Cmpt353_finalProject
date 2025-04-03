@@ -21,7 +21,7 @@ function Question(){
     return(
         <main>
             <HeaderRow>
-                <Header1>Questions</Header1>
+                <Header1 style={{margin:0}}>Questions</Header1>
                 <BlueButtonLink to={'/ask'}>Ask&nbsp;Question</BlueButtonLink>
             </HeaderRow>         
             <QuestionRow/>

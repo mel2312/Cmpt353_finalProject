@@ -2,7 +2,8 @@ import { useState } from "react";
 import styled from "styled-components";
 import Header1 from "./Header1";
 import BlueButton from "./BlueButton";
-
+import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
 const Container = styled.div`
   padding: 30px 20px;
 `;
@@ -30,6 +31,15 @@ const QuestionBodyTextArea = styled.textarea`
   min-height: 200px;
   margin-bottom: 20px;
   color: #fff;
+  font-family: inherit;
+`;
+
+const PreviewArea = styled.div`
+  padding: 10px 20px;
+  background-color: #444;
+  border-raidus: 5px;
+  margin-bottom: 20px;
+
 `;
 
 const FileInput = styled.input`
@@ -59,7 +69,7 @@ const ScreenshotPreview = styled.img`
 `;
 
 export default function AskPage() {
-  const [screenshot, setScreenshot] = useState(null);
+  const [questionBody, setQuestionBody] = useState(null)
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -72,20 +82,32 @@ export default function AskPage() {
     }
   };
 
+
+
+const [screenshot, setScreenshot] = useState(null)  
+const [questionTitle, setQuestionTitle] = useState(null)
+
   return (
     <Container>
       <Header1 style={{ marginBottom: "20px" }}>Ask a Question</Header1>
-      <QuestionTitleInput type="text" placeholder="Title of your question" />
-      <QuestionBodyTextArea placeholder="Type your description of your question here" />
+      <QuestionTitleInput type="text"
+                        value={questionTitle}
+                        onChange={e => setQuestionTitle(e.target.value)}
+                        placeholder="Title of your question" />
+      <QuestionBodyTextArea 
+                        onChange={ e=> setQuestionBody(e.target.value)}
+                        placeholder="Type your description of your question here" />
 
-      {/* Upload Screenshot Section */}
+      
       <UploadButton htmlFor="screenshotUpload">Upload Screenshot</UploadButton>
       <FileInput type="file" id="screenshotUpload" accept="image/*" onChange={handleFileChange} />
 
-      {/* Screenshot Preview */}
+      
       {screenshot && <ScreenshotPreview src={screenshot} alt="Screenshot Preview" />}
-
       <BlueButton>Post your Question</BlueButton>
+      <PreviewArea>
+        <ReactMarkdown remarkPlugins={[gfm]} children={questionBody}/>
+      </PreviewArea>
     </Container>
   );
 }
