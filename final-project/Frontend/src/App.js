@@ -11,6 +11,7 @@ import{
 
 import AskPage from './AskPage'
 import userContext from './UserContext'
+import LoginPage from './LoginPage';
 function App() {
   
   const [user,setUser] = useState(null);
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path='/ask' Component={AskPage}/>
           <Route path='/' Component={Question} />
+          <Route path = '/login' Component={LoginPage}/>
         </Routes>
         </userContext.Provider>
         
