@@ -4,21 +4,12 @@ import Header1 from "./Header1";
 import BlueButton from "./BlueButton";
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
+import StyledInput from "./StyledInput";
 const Container = styled.div`
   padding: 30px 20px;
 `;
 
-const QuestionTitleInput = styled.input`
-  background: none;
-  border: 1px solid #777;
-  border-radius: 3px;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  margin-bottom: 20px;
-  color: #fff;
-`;
+
 
 const QuestionBodyTextArea = styled.textarea`
   background: none;
@@ -90,7 +81,7 @@ const [questionTitle, setQuestionTitle] = useState(null)
   return (
     <Container>
       <Header1 style={{ marginBottom: "20px" }}>Ask a Question</Header1>
-      <QuestionTitleInput type="text"
+      <StyledInput type="text"
                         value={questionTitle}
                         onChange={e => setQuestionTitle(e.target.value)}
                         placeholder="Title of your question" />
