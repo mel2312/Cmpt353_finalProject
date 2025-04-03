@@ -12,4 +12,4 @@ const StyledInput = styled.input`
   color: #fff;
 `;
 
-export default StyledInputInput;
+export default StyledInput;

@@ -5,8 +5,9 @@ const BlueButton = styled.button`
     color: #fff;
     border:0;
     border-raidus: 5px;
-    padding: 12px 10px;
+    padding: 12px 20px;
     text-decoration: none;
+    font-size: 1.1 rem;
 
 `;
 
