@@ -22,7 +22,9 @@ class LoginPage extends Component{
             email: this.state.email,
             password: this.state.password,
 
-        })
+        },
+        {withCredentials: true}
+    )
     }
     render(){
     return(<>

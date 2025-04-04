@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Reset } from 'styled-reset';
 import Header from './Header';
 import Question from './Questions';
@@ -12,9 +12,28 @@ import{
 import AskPage from './AskPage'
 import userContext from './UserContext'
 import LoginPage from './LoginPage';
+import axios from 'axios';
 function App() {
   
   const [user,setUser] = useState(null);
+  function checkAuth() {
+    axios.get('http://localhost:3030/profile', {withCredentials:true})
+        .then(response => {
+          setUser(
+            response.data
+          )
+        })
+        .catch(() => {
+          setUser(null);
+        });
+    }
+
+    useEffect(() => {
+      checkAuth();
+    }, []);
+  
+
+
   return (
     <div>
       <Reset />

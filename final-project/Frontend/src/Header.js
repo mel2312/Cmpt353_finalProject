@@ -72,7 +72,7 @@ function Header(){
           <SearchInput type="text" placeholder="Search..."/>
         </form>
         {user && (
-            <ProfileLink to ={'/profile'}  className="profile">Melwin</ProfileLink>
+            <ProfileLink to ={'/profile'}  className="profile">{user.email}</ProfileLink>
         )}
         {!user && (
             <ProfileLink to = {"/login"} className="profile">Log in</ProfileLink>
