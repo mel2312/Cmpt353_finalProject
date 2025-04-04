@@ -34,7 +34,7 @@ class LoginPage extends Component{
         <StyledInput placeholder="password" type= "password" value={this.state.password}
             onChange={ev => this.setState({password:ev.target.value})}  
         />
-        <BlueButton onClick={() => this.login()}>Login</BlueButton>
+         <BlueButton onClick={()=> this.login()}>Login</BlueButton>
     </Container>
         
     </>);
