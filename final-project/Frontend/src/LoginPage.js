@@ -1,9 +1,10 @@
-import { Component } from "react";
+import { Component, useContext } from "react";
 import Header1 from "./Header1"
 import styled from "styled-components";
 import StyledInput from "./StyledInput";
 import BlueButton from "./BlueButton";
 import axios from 'axios';
+import UserContext from "./UserContext";
 
 const Container = styled.div`
     padding: 30px 20px;
@@ -24,7 +25,10 @@ class LoginPage extends Component{
 
         },
         {withCredentials: true}
-    )
+    ).then(()=>{
+        this.context.checkAuth();
+
+    })
     }
     render(){
     return(<>
@@ -43,4 +47,5 @@ class LoginPage extends Component{
     }
 }
 
+LoginPage.contextType = UserContext
 export default LoginPage

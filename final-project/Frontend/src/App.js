@@ -41,7 +41,7 @@ function App() {
       
       
       <Router>
-        <userContext.Provider value={{user}}>
+        <userContext.Provider value={{user,checkAuth}}>
         <Header/>
         <Routes>
           <Route path='/ask' Component={AskPage}/>
